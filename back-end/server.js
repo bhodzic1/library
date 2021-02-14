@@ -5,8 +5,6 @@ var app = express();
 var cors = require('cors')
 const jwt = require("jsonwebtoken");
 const multer = require('multer');
-const fs = require('fs');
-const path = require('path');
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -21,7 +19,7 @@ app.use('/authors', authors);
 app.use('/books', books);
 
 const storage = multer.diskStorage({
-    destination: "../front-end/library-client/public/images/uploads/",
+    destination: "../front-end/public/images/uploads/",
     filename: function (req, file, cb) {
         cb(null, file.originalname);
     }
@@ -49,26 +47,12 @@ app.post('/login', (req, res) => {
 app.post('/upload', function (req, res) {
     upload(req, res, function (err) {
         console.log("Request ---", req.body);
-        console.log("Request file ---", req.file);//Here you get file.
-        /*Now do where ever you want to do*/
+        console.log("Request file ---", req.file);
         if (!err) {
             return res.send(200).end();
         }
     })
 })
-
-/*function authenticateToken(req, res, next) {
-    const authHeader = req.headers['authorization']
-    const token = authHeader && authHeader.split(' ')[1]
-    if (token == null) return res.sendStatus(401)
-
-    jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
-        console.log(err)
-        if (err) return res.sendStatus(403)
-        req.user = user
-        next()
-    })
-}*/
 
 
 app.listen(5000, () => console.log('App listening on port 5000!'));
