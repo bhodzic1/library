@@ -1,6 +1,6 @@
 Full-stack web aplikacija napravljena u ReactJS, NodeJS, MySql (Knex), koristeci apache server.
 
-Da bi se pokrenula ova aplikacija potrebno je pokrenuti apache server, uci u direktorij back-end i pokrenuti backend server komandom "npm start", nakon toga je potrebno uci u direktorij front-end/library-client i koristeci istu naredbu pokrenuti front-end development server.
+Da bi se pokrenula ova aplikacija potrebno je pokrenuti apache server, uci u direktorij back-end i pokrenuti backend server komandom "npm start", nakon toga je potrebno uci u direktorij front-end i koristeci istu naredbu pokrenuti front-end development server.
 
 Funkcionalnosti:
 Login/logout
