@@ -2,7 +2,7 @@ Full-stack web aplikacija napravljena u ReactJS, NodeJS, MySql (Knex), koristeci
 
 Potrebno je kreirati bazu podataka pod nazivom "library".
 
-Da bi se pokrenula ova aplikacija potrebno je pokrenuti apache server, uci u direktorij back-end i pokrenuti backend server komandom "npm start", nakon toga je potrebno uci u direktorij front-end i koristeci istu naredbu pokrenuti front-end development server.
+Da bi se pokrenula ova aplikacija potrebno je pokrenuti apache server, uci u direktorij back-end i pokrenuti backend server komandom "npm start", nakon toga je potrebno uci u direktorij front-end, instalirati aplikaciju komandom "npm install" i koristeci "npm start" naredbu pokrenuti front-end development server.
 
 Funkcionalnosti:
 Login/logout
